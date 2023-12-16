@@ -1,0 +1,269 @@
+body {
+  margin: auto;
+  overflow-x: hidden;
+}
+#navbar {
+  background-color: #f5f5f5;
+  padding: 0px 16px;
+  min-height: 56px;
+  color: #383838;
+  font-size: 26px;
+  display: flex;
+}
+#navbar > div {
+  width: 20%;
+  text-decoration: none;
+  color: #212122;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+#navbar .back-button {
+  color: #212122;
+}
+
+#footer-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%),
+    0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+#price-coupon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#checkout-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: #10a310;
+  padding: 16px 20px;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 18px;
+  width: 600px;
+}
+#footer-box #checkout-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.info-bluebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.info-bluebox > div {
+  width: 37%;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #5160c2;
+  background: rgba(3, 138, 255, 0.1);
+  padding: 18px 32px 18px 15px;
+  margin-bottom: 20px;
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+}
+
+#box img {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+}
+
+#protection-package {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.pickup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+
+#add {
+  width: 50%;
+}
+
+#delivery-option {
+  width: 50%;
+}
+#white-box {
+  width: 48%;
+  padding: 0 16px 16px 8px;
+  margin-top: 16px;
+  background-color: #f5f5f5;
+}
+#white-box h4 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+  padding-bottom: 0;
+}
+#white-box p {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #1f1f1f;
+  color: #1f1f1f;
+}
+.keep {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+#keepinmind {
+  width: 50%;
+  margin-bottom: 25px;
+}
+#keepinmind .text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+  padding: 32px 16px 0px;
+  margin-left: 20px;
+}
+
+.keep .text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+  text-align: left;
+}
+
+.text2 {
+  margin-right: 20px;
+}
+.text2 > h6 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.text2 > p {
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+  padding: 0;
+  margin: 0;
+}
+.text2 > h3 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+  letter-spacing: 2px;
+  color: #10a310;
+  font-weight: bold;
+  margin-top: 2px;
+}
+#container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDiv {
+  width: 50%;
+  margin: auto;
+}
+
+.nameImageDiv {
+  width: 85%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 0 0 0 10px;
+  margin-bottom: 20px;
+  margin-left: 64px;
+}
+.nameImageDiv > img {
+  width: 180px;
+  height: auto;
+}
+.nameDiv,
+.iconDiv,
+.ratingsDiv {
+  display: flex;
+}
+.iconDiv,
+.ratingsDiv {
+  margin-left: 64px;
+}
+.nameDiv > p {
+  margin-right: 10px;
+  font-weight:600;
+  font-size:22px;
+}
+.iconDiv > img {
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.ratingsDiv > img {
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+  margin-right: 12px;
+}

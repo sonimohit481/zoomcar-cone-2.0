@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Drive Car Rentals</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      #login-container-at {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 8%;
+        /* position:absolute;
+            top: 16%;
+            right: 35%; */
+      }
+      #img-login-at {
+        width: 100%;
+      }
+      #img-login-at > img {
+        width: 100%;
+        margin: 0px;
+      }
+      #login-heading-at {
+        font-weight: 550;
+        font-size: 1.5rem;
+        text-align: start;
+      }
+
+      #login-container-at > div {
+        /* margin: 2%; */
+        border-bottom: 0.5px solid rgb(176, 176, 176);
+        /* width: 80%; */
+        padding: 3%;
+        margin: 1%;
+      }
+
+      #img-login-at {
+        margin: 0px;
+      }
+      #login-country-at {
+        color: rgb(6, 188, 6);
+      }
+
+      #login-container-at > div:nth-child(1) {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+      }
+
+      #login-contemail-at {
+        color: rgb(6, 188, 6);
+        font-size: 1.1rem;
+      }
+      #login-contsocila-at {
+        color: rgb(6, 188, 6);
+        font-size: 1.1rem;
+      }
+      #login-selectcountry-at > select {
+        width: 25%;
+        overflow: hidden;
+        border: none;
+      }
+      #login-selectcountry-at > input {
+        width: 40%;
+        border: none;
+        border-left: 1px solid rgb(180, 180, 180);
+      }
+      #login-contsocila-at {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        /* border: 1px solid red; */
+        padding: 0px;
+      }
+      #login-selectcountry-at > select,
+      input {
+        padding: 2%;
+      }
+      #login-contsocila-at > div {
+        width: 5%;
+        margin-left: 3%;
+        /* border: 1px solid red; */
+        padding: 0px;
+        margin: 0px;
+        margin-left: 2%;
+      }
+      #login-contsocila-at > div > img {
+        width: 100%;
+        
+      }
+      #login-selectcountry-at > select,
+      input:focus {
+        border: none;
+      }
+      /* #login-selectcountry-at>button{
+            padding: 1%;
+            background-color:rgb(6, 188, 6);
+            border: none;
+            color: white;
+            font-size: 1.1em;
+            border-radius: 5px;
+            width: 20%;
+            cursor: pointer;
+        } */
+      #login-contemail-at {
+        cursor: pointer;
+      }
+      .entermobnumber-at {
+        background-color: white;
+        height: 100%;
+        width: 94%;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        visibility: hidden;
+      }
+      .login-enterdiv-at {
+        /* border: 1px solid red; */
+        background-color: white;
+        /* height: 500px;
+            width: 700px; */
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+      }
+      .login-enterdiv-at > p {
+        font-size: 25px;
+        width: 50%;
+        margin: 1% auto;
+        /* padding: 1%; */
+        /* border: 1px solid purple; */
+        margin-bottom: 0px;
+        cursor: pointer;
+      }
+      #login-countryandnumber-at {
+        width: 50%;
+        margin: 2% auto;
+        /* border: 1px solid red; */
+      }
+      #login-countryandnumber-at > select,
+      input {
+        padding: 2%;
+        /* margin: 1% */
+        border-radius: 3px;
+      }
+      #login-countryandnumber-at > select {
+        width: 20%;
+      }
+      #login-countryandnumber-at > input {
+        width: 70%;
+        margin: 2%;
+      }
+      #tex-at {
+        margin: 1%;
+        /* padding: 1%; */
+        width: 50%;
+        margin: auto;
+        font-size: 18px;
+        margin-top: 2%;
+      }
+      #login-countryandnumber-at > select:focus {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+      }
+      #login-countryandnumber-at > select:active {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+      }
+
+      #modal-btn-at {
+        /* border: 1px solid red; */
+        width: 70%;
+        margin: auto;
+        display: flex;
+      }
+      #modal-btn-at > button {
+        width: 40%;
+        padding: 2%;
+        margin: auto;
+        margin-top: 30%;
+        border: none;
+        color: white;
+        background-color: rgb(226, 226, 226);
+        font-size: 18px;
+        border-radius: 3px;
+        cursor: none;
+      }
+
+      .login-registermodal-at {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 94%;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .registeropt-at {
+        width: 40%;
+        background-color: white;
+        padding: 0.5%;
+        border-radius: 7px;
+      }
+      .registeropt-at > h5,
+      p,
+      div {
+        margin: 6%;
+      }
+      .registeropt-at > h5 {
+        color: rgb(6, 188, 6);
+        font-size: 20px;
+      }
+      .registeropt-at > p {
+        font-size: 17px;
+      }
+      .registeropt-at > div {
+        /* border: 1px solid red; */
+        text-align: center;
+        padding: 2%;
+        background-color: rgb(6, 188, 6);
+        border-radius: 4px;
+      }
+      .registeropt-at > div > a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+      }
+      .registeropt-at > span {
+        position: absolute;
+        top: 29%;
+        right: 30.5%;
+        background-color: rgb(239, 239, 239);
+        padding: 0.6%;
+        border-radius: 50%;
+        width: 1%;
+        text-align: center;
+        cursor: pointer;
+      }
+      #login-mob-number-at:focus {
+        outline: none !important;
+        border: none;
+      }
+      #login-modal-mob-number-at:focus {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login-container-at">
+      <div id="img-login-at">
+        <img src="https://www.zoomcar.com/img/bg-desktop.png" id="login-img" />
+      </div>
+      <div id="login-heading-at">Enter details to login/sign-up</div>
+      <div id="login-selectcountry-at">
+        <select name="country" id="login-country-at">
+          <option value="India">India</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Philippines">Phililippines</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Indonesia">Indonesia</option>
+        </select>
+
+        <input
+          type="tel"
+          placeholder="Enter Mobile Number"
+          id="login-mob-number-at"
+        />
+        <!-- <button>Continue</button> -->
+      </div>
+
+      <div id="login-contemail-at">Continue With Email</div>
+
+      <div id="login-contsocila-at">
+        Continue via Social
+        <div>
+          <img
+            src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-clipart-flat-facebook-logo-png-icon-circle-22.png"
+            alt=""
+          />
+        </div>
+
+        <div>
+          <img
+            src="https://www.freepnglogos.com/uploads/google-favicon-logo-20.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- modal section  after clicking on enter mobile number -->
+
+      <div class="entermobnumber-at">
+        <div class="login-enterdiv-at">
+          <p id="modal-goback-at">&#8592;</p>
+          <p id="tex-at">Enter Mobile Number</p>
+          <div id="login-countryandnumber-at">
+            <select name="country" id="login-modal-country-at">
+              <option value="India">India</option>
+              <option value="Egypt">Egypt</option>
+              <option value="Philippines">Phililippines</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Indonesia">Indonesia</option>
+            </select>
+
+            <input
+              type="tel"
+              placeholder="Enter Mobile Number"
+              id="login-modal-mob-number-at"
+            />
+          </div>
+        </div>
+        <div id="modal-btn-at">
+          <button id="modal-button-at">Continue</button>
+        </div>
+      </div>
+
+      <!-- --------------------------modal section ends--------------------------------- -->
+
+      <!-- ------------------------modal for registering------------------------------ -->
+
+      <div class="login-registermodal-at">
+        <div class="registeropt-at">
+          <span id="cancel">X</span>
+          <h5>New Here? Welcome!</h5>
+          <p>
+            The mobile number has not been registered with us. Lets create a new
+            account.
+          </p>
+          <div><a href="./signup-1.html">Register</a></div>
+        </div>
+      </div>
+
+      <!-- -------------------------register modal ends------------------------------  -->
+    </div>
+  </body>
+  <script>
+
+    //   localStorage.clear()
+    let registeredusers = localStorage.getItem("registeredusers");
+    console.log(registeredusers);
+    if (registeredusers == null) {
+      console.log("hello world");
+      localStorage.setItem("registeredusers", JSON.stringify([]));
+    }
+    // ----------------------modal events---------------------------
+
+    document
+      .getElementById("login-mob-number-at")
+      .addEventListener("click", function () {
+        // event.preventDefault();
+        document.querySelector(".entermobnumber-at").style.visibility =
+          "visible";
+      });
+
+    document
+      .getElementById("modal-goback-at")
+      .addEventListener("click", function () {
+        // event.preventDefault();
+        document.querySelector(".entermobnumber-at").style.visibility =
+          "hidden";
+      });
+
+    document
+      .getElementById("login-modal-mob-number-at")
+      .addEventListener("input", function () {
+        // event.preventDefault();
+        let cnt = document.getElementById("login-modal-mob-number-at").value;
+        // cnt = parseInt(cnt);
+        if (cnt.length == 10) {
+          document.querySelector("#modal-button-at").style.background =
+            "rgb(6, 188, 6)";
+          document.querySelector("#modal-button-at").style.cursor = "pointer";
+        }
+      });
+    document
+      .getElementById("login-modal-mob-number-at")
+      .addEventListener("keydown", function () {
+        // event.preventDefault();
+        let cnt = document.getElementById("login-modal-mob-number-at").value;
+        // cnt = parseInt(cnt);
+        if (cnt.length < 11 || cnt.length > 11) {
+          document.querySelector("#modal-button-at").style.background =
+            "rgb(226, 226, 226)";
+          // document.querySelector("#modal-button-at").style.cursor = "pointer";
+        }
+      });
+
+    document.getElementById("cancel").addEventListener("click", function () {
+      // event.preventDefault();
+      document.querySelector(".login-registermodal-at").style.visibility =
+        "hidden";
+    });
+    // -------------------------modal events end-------------------------
+
+    // if user is not registered
+    document
+      .getElementById("modal-button-at")
+      .addEventListener("click", function () {
+        // console.log("Hello world");
+        event.preventDefault();
+        // if(registeredusers == null){
+        //     localStorage.setItem("registeredusers",JSON.stringify([]));
+        // }
+        let mobnum = document.getElementById("login-modal-mob-number-at").value;
+        let flag = 0;
+        // console.log(mobnum);
+        let user1;
+        registeredusers = JSON.parse(localStorage.getItem("registeredusers"));
+        registeredusers.forEach(function (user) {
+          if (mobnum == user.phone) {
+            flag = 1;
+            user1 = user.phone;
+          }
+        });
+        if (flag == 0) {
+          document.querySelector(".entermobnumber-at").style.visibility =
+            "hidden";
+          document.querySelector(".login-registermodal-at").style.visibility =
+            "visible";
+          mobilenumber = JSON.parse(localStorage.getItem("mobilenumber"));
+          mobilenumber = mobnum;
+          localStorage.setItem("mobilenumber", JSON.stringify(mobilenumber));
+          localStorage.setItem(
+            "registeredusers",
+            JSON.stringify(registeredusers)
+          );
+        } else {
+          localStorage.setItem("user", user1);
+          localStorage.setItem(
+            "registeredusers",
+            JSON.stringify(registeredusers)
+          );
+          location.href = "./login-otp-form.html";
+        }
+      });
+  </script>
+</html>

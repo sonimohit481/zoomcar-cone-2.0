@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search cars</title>
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel = "stylesheet" href = "booking.css"/>
+  </head>
+  <body>
+    <div id="navbar">
+      <div class="hamburger-pointer"  id = "openNav" onclick = "openNav()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div id="logo">
+        <a href = "index.html">ZOOMCAR</a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="host.html">Become a Host</a>
+          </li>
+          <li>
+            <a href="zms.html">ZMS</a>
+          </li>
+          <li>
+            <a href="login.html"  id="loginn-at" >Login/Signup</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id = "main">
+
+    </div>
+
+    <div id="side-navbar">
+    
+
+      <a href="" class = "active"><i class="fa-solid fa-user"></i>Login or Signup</a>
+
+      <a href="" class = "change-city">
+        <div>
+          <i class="fa-solid fa-location-dot"></i></i> Change  City
+        </div>
+
+        <div class = "cityName">
+              Bangalore
+        </div>
+      
+      </a>
+      <a href="">Supermiler club</a>
+      <a href=""><i class="fa-solid fa-file-lines"></i>Zoomcar Fleet Vehicles Policies </a>
+      <a href=""><i class="fa-solid fa-file-lines"></i>Zoomcar Host Vehicles Policies</a>
+      <a href=""><i class="fa-solid fa-phone"></i>Help & Support</a>
+      
+    </div>
+
+    <div id="container">
+      <div id="filter-box">
+            <div class = "heading-list">Seats</div>
+            <div class = "list-items">
+              <div class = "list-box"><div class = "filtertext" id = "filter5">5</div></div>
+              <div class = "line-between"></div>
+              <div class = "list-box"><div class = "filtertext" id = "filter7">7</div></div>
+            </div>
+
+            <div class = "heading-list">Car Types</div>
+            <div class = "list-items1">
+              <div  class = "list-box"><div class = "text1 filtertext" id = "filtersuv">SUV</div></div>
+              <div class = "line-between"></div>
+              <div class = "list-box" ><div class = "text1 filtertext" id = "filterhatchback">hatchback</div></div>
+            </div>
+
+            <div class = "heading-list">Transmission</div>
+            <div class = "list-items">
+              <div class = "list-box"><div class = "filtertext" id = "filtermanual">Manual</div></div>
+              <div class = "line-between"></div>
+              <div class = "list-box"><div class = "filtertext" id = "filterautomatic">Automatic</div></div>
+            </div>
+
+            <div class = "heading-list">Delivery Type</div>
+            <div class = "list-items">
+              <div class = "list-box" ><div class = "filtertext" id = "filterhome">Home Delivery</div></div>
+              <div class = "line-between"></div>
+              <div  class = "list-box"><div class = "filtertext" id = "filterairport">Airport</div></div>
+            </div>
+
+            <div class = "info-bluebox">
+                "Enjoy free kilometers. If you leave the car with excess fuel compared to booking start, 
+                value of that extra fuel will be refunded to you"
+            </div>
+        </div>
+
+        <div id = "container-right">
+          <div class = "info-box">
+            <div class = "heading"> 
+              <h5>ENJOY FREE KMS</h5> 
+            </div>
+            
+            <div class = "text"> 
+              
+              <p>If you leave the car with Excess fuel compared to booking start,
+              value of that extra fuel will be refunded to you</p> 
+            </div>
+          </div>
+  
+            <div id="cars-box">
+              
+           </div>
+
+        </div>  
+    </div>
+  </body>
+  <script src = "booking.js"></script>
+</html>

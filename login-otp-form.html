@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .entermobnumber-at {
+        background-color: white;
+        height: 100%;
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 1px solid red; */
+        margin: auto;
+      }
+
+      .login-enterdiv-at {
+        /* border: 1px solid red; */
+        background-color: white;
+        /* height: 500px;
+            width: 700px; */
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+      }
+
+      .login-enterdiv-at > p {
+        font-size: 25px;
+        width: 50%;
+        margin: 1% auto;
+        /* padding: 1%; */
+        /* border: 1px solid purple; */
+        margin-bottom: 0px;
+        cursor: pointer;
+      }
+
+      #login-countryandnumber-at {
+        width: 50%;
+        margin: 2% auto;
+        /* border: 1px solid red; */
+      }
+
+      #modal-btn-at {
+        /* border: 1px solid red; */
+        width: 70%;
+        margin: auto;
+        display: flex;
+      }
+
+      #modal-btn-at > button {
+        width: 40%;
+        padding: 2%;
+        margin: auto;
+        margin-top: 30%;
+        border: none;
+        color: white;
+        background-color: rgb(226, 226, 226);
+        /* background-color: green; */
+        font-size: 18px;
+        border-radius: 3px;
+        cursor: none;
+      }
+
+      #login-countryandnumber-at > form > input {
+        width: 100%;
+        padding: 2%;
+        margin: 3% 0px 3% 0px;
+        border-radius: 3px;
+        border: 1px solid rgb(168, 168, 168);
+      }
+
+      #register-small-p-at {
+        font-size: 15px;
+        color: grey;
+      }
+
+      #login-countryandnumber-at > form > a {
+        text-decoration: none;
+        color: rgb(6, 188, 6);
+        display: flex;
+        flex-direction: column;
+        margin: 2% 0px 2% 0px;
+      }
+
+      #register-name-at:focus {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+      }
+
+      #signup-otp-modal-at {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #signup-otpsection-at {
+        background-color: white;
+        width: 40%;
+        border-radius: 6px;
+      }
+
+      #signup-otpsection-at > p {
+        text-align: center;
+        font-size: 25px;
+      }
+
+      #otp-imgdiv-at {
+        width: 15%;
+        margin: auto;
+      }
+
+      #otp-imgdiv-at > img {
+        width: 100%;
+        margin: 2%;
+      }
+
+      #otp-btn-div-at {
+        /* border: 1px solid red; */
+        width: 30%;
+        margin: auto;
+        margin-top: 7%;
+      }
+
+      #otp-btn-div-at > button {
+        /* border: 1px solid red; */
+        width: 95%;
+        padding: 6%;
+        margin: 5%;
+        background-color: rgb(6, 188, 6);
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .use-password-at {
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+      }
+      #modal-login-enterpassword-at {
+        width: 100%;
+        padding: 2%;
+        margin: 3% 0px 3% 0px;
+        border-radius: 3px;
+        border: 1px solid rgb(168, 168, 168);
+        /* border: 1px solid red; */
+        margin: auto;
+        /* text-align: center; */
+      }
+
+      .login-enterdivpass-at {
+        background-color: white;
+        /* height: 500px;
+            width: 700px; */
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+      }
+      .login-enterdivpass-at > p {
+        font-size: 25px;
+        width: 50%;
+        margin: 1% auto;
+        /* padding: 1%; */
+        /* border: 1px solid purple; */
+        margin-bottom: 0px;
+        cursor: pointer;
+      }
+      .login-enterdivpass-at > form {
+        font-size: 25px;
+        width: 50%;
+        margin: 1% auto;
+        /* padding: 1%; */
+        /* border: 1px solid purple; */
+        margin-top: 3%;
+        /* margin: 4% ; */
+        margin-bottom: 0px;
+        cursor: pointer;
+      }
+      /* .login-enterdivpass-at>form>input{
+            
+        } */
+      #modal-login-enterpassword-at:focus {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="entermobnumber-at">
+      <div class="login-enterdiv-at">
+        <p id="modal-goback-at">&#8592;</p>
+        <p id="tex-at">Enter 6-Digit OTP</p>
+        <p id="register-small-p-at">OTP Was Sent To Your Mobile Number</p>
+        <div id="login-countryandnumber-at">
+          <form id="formm">
+            <input
+              type="text"
+              id="register-name-at"
+              placeholder="Enter OTP"
+              required
+            />
+            <a>Resend Otp</a>
+            <a id="login-pass-at">Use Password</a>
+          </form>
+        </div>
+      </div>
+      <div id="modal-btn-at">
+        <button id="modal-button-at">Continue</button>
+      </div>
+    </div>
+
+    <div class="use-password-at">
+      <div class="login-enterdivpass-at">
+        <p id="modal-goback-att">&#8592;</p>
+        <p id="tex-at">Enter Password</p>
+        <p id="register-small-p-at">Associated with Your Mobile Number</p>
+        <form>
+          <input
+            type="password"
+            id="modal-login-enterpassword-at"
+            placeholder="Enter Password"
+            required
+          />
+        </form>
+      </div>
+      <div id="modal-btn-at">
+        <button id="modal-passbutton-at">Continue</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("register-name-at")
+      .addEventListener("input", function () {
+        let otp = document.getElementById("register-name-at").value;
+        if (otp.length == 6) {
+          document.querySelector("#modal-button-at").style.background =
+            "rgb(6, 188, 6)";
+        }
+      });
+
+    document
+      .getElementById("modal-button-at")
+      .addEventListener("click", function () {
+        let otp = document.getElementById("register-name-at").value;
+        if (otp == "654321") {
+          let registeredusers = JSON.parse(
+            localStorage.getItem("registeredusers")
+          );
+          let user1 = localStorage.getItem("user");
+          console.log(user1);
+          registeredusers.forEach(function (user) {
+            if (user1 == user.phone) {
+              localStorage.setItem("userinfo", JSON.stringify(user));
+            }
+          });
+          location.href = "./index.html";
+        } else {
+          let cont = document.querySelector("#formm");
+          let ele = document.createElement("p");
+          // ele.setAttribute("id","invalid-at");
+          // ele.innerHTML = `Invalid OTP`;
+          ele.style.color = "red";
+          ele.style.fontSize = "15px";
+          cont.append(ele);
+          let inp = document.querySelector("#register-name-at");
+          inp.style.outline = "none !important";
+          inp.style.border = "2px solid red";
+        }
+      });
+
+    // document.getElementById("otp-button-at").addEventListener("click",function(){
+    //     location.href="./login.html";
+    // });
+
+    document
+      .getElementById("modal-goback-at")
+      .addEventListener("click", function () {
+        location.href = "./login.html";
+      });
+
+    document
+      .getElementById("modal-login-enterpassword-at")
+      .addEventListener("input", function () {
+        let len = document.getElementById("modal-login-enterpassword-at").value;
+        // console.log(len)
+        if (len.length > 5) {
+          document.querySelector("#modal-passbutton-at").style.background =
+            "rgb(6, 188, 6)";
+        }
+      });
+
+    document
+      .getElementById("modal-passbutton-at")
+      .addEventListener("click", function () {
+        let pass = document.getElementById(
+          "modal-login-enterpassword-at"
+        ).value;
+        let registeredusers = JSON.parse(
+          localStorage.getItem("registeredusers")
+        );
+        let user1 = localStorage.getItem("user");
+        let flag = 0;
+        console.log(user1);
+        registeredusers.forEach(function (user) {
+          if (user1 == user.phone && pass == user.password) {
+            localStorage.setItem("userinfo", JSON.stringify(user));
+            flag = 1;
+          }
+        });
+        if (flag == 1) {
+          location.href = "./index.html";
+        } else {
+          let cont = document.querySelector(".login-enterdivpass-at");
+          let ele = document.createElement("p");
+          ele.setAttribute("id", "invalid-at");
+          ele.innerHTML = `Invalid Password`;
+          ele.style.color = "red";
+          ele.style.fontSize = "15px";
+          cont.append(ele);
+          let inp = document.querySelector("#modal-login-enterpassword-at");
+          inp.style.outline = "none !important";
+          inp.style.border = "2px solid red";
+        }
+      });
+
+    document
+      .getElementById("login-pass-at")
+      .addEventListener("click", function () {
+        document.querySelector(".use-password-at").style.visibility = "visible";
+      });
+
+    document
+      .getElementById("modal-goback-att")
+      .addEventListener("click", function () {
+        document.querySelector(".use-password-at").style.visibility = "hidden";
+      });
+  </script>
+</html>

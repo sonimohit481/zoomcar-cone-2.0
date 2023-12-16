@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .entermobnumber-at{
+            background-color: white;
+            height: 100%;
+            width: 94%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           /* border: 1px solid red; */
+           margin: auto;
+        }
+        .login-enterdiv-at{
+            /* border: 1px solid red; */
+            background-color: white;
+            /* height: 500px;
+            width: 700px; */
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
+        .login-enterdiv-at>p{
+            font-size: 25px;
+            width: 50%;
+            margin: 1% auto;
+            /* padding: 1%; */
+            /* border: 1px solid purple; */
+            margin-bottom: 0px;
+            cursor: pointer;
+        }
+        #login-countryandnumber-at{
+            width:50%;
+            margin: 2% auto;
+            /* border: 1px solid red; */
+        }
+        #login-countryandnumber-at>select,input{
+            padding: 2%;
+            /* margin: 1% */
+            border-radius: 3px;
+        }
+        #login-countryandnumber-at>select{
+            width: 20%;
+        }
+        #login-countryandnumber-at>input{
+            width: 70%;
+            margin: 2%;
+        }
+        #tex-at{
+            margin: 1%;
+            /* padding: 1%; */
+            width: 50%;
+            margin: auto;
+            font-size: 18px;
+            margin-top: 2%;
+
+        }
+        #login-countryandnumber-at>select,input:active{
+            border: 1px solid rgb(6, 188, 6);
+        }
+        
+        #modal-btn-at{
+            /* border: 1px solid red; */
+            width: 70%;
+            margin:auto ;
+            display: flex;
+        }
+        #modal-btn-at>button{
+            width: 40%;
+            padding: 2%;
+            margin:auto;
+            margin-top:30% ;
+            border: none;
+            color:white ;
+            background-color: rgb(226, 226, 226);
+            font-size: 18px;
+            border-radius: 3px;
+            cursor: none;
+        }
+
+        .login-registermodal-at{
+            background-color: rgba(0, 0, 0,0.7);
+            height: 100%;
+            width: 94%;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            visibility:hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #register-modal-email-at{
+            /* border: 1px solid red; */
+            width: 93%;
+            margin-top: 5%;
+        }
+
+        #register-modal-email-at:focus{
+            outline: none !important;
+            border: 2px solid rgb(6, 188, 6);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="entermobnumber-at">
+        <div class="login-enterdiv-at">
+            <p id="modal-goback-at">&#8592;</p>
+            <p id="tex-at">Enter Mobile Number</p>
+            <div id="login-countryandnumber-at">
+                <select name="country" id="login-modal-country-at">
+                    <option value="India" selected>India</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Philippines">Phililippines</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Indonesia">Indonesia </option>
+                </select>
+    
+                <input type="tel" placeholder="Enter Mobile Number" id="login-modal-mob-number-at" required />
+                <div id="register-modal-email-div-at"><input type="email" placeholder="Enter Your Email" id="register-modal-email-at" required/></div>
+            </div>
+        </div>
+        <div id="modal-btn-at"><button id="modal-button-at">Continue</button></div>
+    </div>
+
+</body>
+<script>
+    let mobnum = JSON.parse(localStorage.getItem("mobilenumber"));
+    
+    document.getElementById("modal-button-at").addEventListener("click",function(){
+        let inp = document.getElementById("register-modal-email-at").value;
+        let email = document.getElementById("register-modal-email-at").value
+        localStorage.setItem("email",JSON.stringify(email));
+        if(inp.length>0){
+        location.href="./signup-2.html";
+        }
+    });
+
+    document.getElementById("register-modal-email-at").addEventListener("input",function(){
+        document.querySelector("#modal-button-at").style.background = "rgb(6, 188, 6)";
+    });
+
+    document.getElementById("login-modal-mob-number-at").placeholder = `${mobnum}`;
+
+    
+
+</script>
+</html>

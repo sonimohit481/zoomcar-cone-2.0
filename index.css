@@ -1,0 +1,450 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+}
+#navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.hamburger-pointer {
+  cursor: pointer;
+}
+#navbar #logo {
+  width: 50%;
+}
+#navbar #logo a {
+  background-image: url(https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png);
+  background-repeat: no-repeat;
+  font-size: 0;
+  height: 40px;
+  width: 182px;
+  display: block;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#navbar nav {
+  width: 50%;
+}
+#navbar nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#side-navbar div {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+#navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#side-navbar .active {
+  background-color: #e5e8ec;
+}
+
+#side-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 14px;
+}
+#side-navbar a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 19px 20px;
+  color: #323a44;
+  transition: 0.3s;
+}
+
+#side-navbar a .fa-solid {
+  margin-right: 10px;
+}
+
+#side-navbar .change-city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#side-navbar .change-city .cityName {
+  font-size: 14px;
+  font-weight: bold;
+  color: #10a310;
+}
+
+#side-navbar .change-city > div {
+  color: #323a44;
+  font-size: 14px;
+}
+/* mohit's */
+#pic {
+  display: flex;
+  background-image: url("https://www.zoomcar.com/img/bg-desktop.png");
+  background-size: 100% 100%;
+  height: 600px;
+  width: 100%;
+  margin: auto;
+}
+#pic div {
+  margin: 0 auto;
+  margin-top: 25%;
+}
+
+#pic form {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#pic form > input {
+  margin-bottom: 18px;
+  border: none;
+  outline: none;
+  border: 0.5 px solid #e5e8ec;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  overflow: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 6px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#pic form a {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* popup for trip start time */
+
+#pic label {
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+#findCars-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 0;
+  background-color: #10a310;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+@media (max-width: 3470px) {
+  .promo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 65%;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .promo > div {
+    display: grid;
+    width: 100%;
+    margin: auto;
+  }
+  .promo > div > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+  #f {
+    width: 65%;
+    margin: 20px auto;
+  }
+  #f > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .promo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .promo > div {
+    width: 100%;
+    margin: auto;
+  }
+  .promo > div > img {
+    width: 100%;
+  }
+  #f {
+    width: 80%;
+    margin: 20px auto;
+  }
+  #f > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+  #navbar nav ul {
+    width: 0;
+    font-size: 0;
+  }
+}
+@media (max-width: 786px) {
+  .promo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 95%;
+    margin: auto;
+  }
+  .promo > div {
+    width: 100%;
+    margin: auto;
+  }
+  .promo > div > img {
+    width: 100%;
+  }
+  #f {
+    width: 95%;
+    margin: 20px auto;
+  }
+  #f > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+}
+/*   login section css      */
+#chandan {
+  width: 100%;
+  overflow: hidden;
+}
+#loginsetion {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  padding: 100px 0px;
+  flex-wrap: wrap;
+  background-color: rgb(235, 235, 240);
+  position: relative;
+  z-index: -1;
+}
+#refer {
+  position: relative;
+  display: flex;
+  height: 150px;
+  max-width: 1000px;
+  width: 500px;
+  min-width: 900px;
+  margin: 10px;
+  border: 1.5px solid rgb(190, 181, 181);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+#loginsection img {
+  width: 40px;
+}
+#imgsidecontent > p {
+  line-height: 1.5;
+  color: #666;
+  font-size: 14px;
+}
+#imgsidecontent {
+  position: absolute;
+  top: 30px;
+  font-size: 12px;
+  left: 180px;
+}
+#imgsidecontent a {
+  text-decoration: none;
+  color: black;
+}
+/*scroll section csss------------------*/
+#scrollsectionouter {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#scrollsection {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#scrollsection::-webkit-scrollbar {
+  display: none;
+}
+
+#refer,
+#login {
+  position: relative;
+  display: flex;
+  height: 150px;
+  max-width: 600px;
+  width: 500px;
+  min-width: 400px;
+  margin: 10px;
+  border: 1.5px solid rgb(190, 181, 181);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+#scrollsection img {
+  width: 280px;
+  height: fit-content;
+  margin: 8px;
+  border: 0.3px solid rgb(187, 181, 181);
+}
+/* ------------about section css----------------*/
+#aboutsection {
+  width: 100%;
+  justify-content: center;
+  background-color: #f5f5f5;
+  margin-top: -35px;
+  padding-top: 25px;
+}
+#aboutsection .centerp {
+  width: 100%;
+  border: 0.1px solid rgb(233, 231, 231);
+  text-align: center;
+  padding: 12px 0px;
+}
+
+.about {
+  width: 80%;
+  margin: auto;
+}
+.about p {
+  text-align: left;
+  color: #1f1f1f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#aboutsection h6 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+
+#spanspan-at {
+  font-size: 1.6rem;
+}
+#loginn-at {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+/*---------------------------footer section-----------------------*/
+.footer {
+  width: 30%;
+  margin: auto;
+  padding: 35px 0 20px 0;
+  font-size: smaller;
+}
+
+/* login on navbar */
+
+#spanspan-at {
+  font-size: 1.6rem;
+}
+#loginn-at {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+/* about us dropdown */
+.accordian {
+  width: 100%;
+}
+
+.accordian .content-box {
+  position: relative;
+}
+
+.accordian .content-box .label {
+  position: relative;
+  padding: 15px;
+  background-color: #eceff1;
+  color: #666;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2px solid #cecece;
+}
+
+.accordian .content-box .label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.accordian .content-box.active .label::before {
+  content: "";
+}
+
+.accordian .content-box .content {
+  position: relative;
+  background-color: #f7f9fb;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+  font-size: 1.3em;
+  color: #1f1f1f;
+  text-align: left;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accordian a {
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 12px;
+  color: #323a44;
+}
+
+.accordian .content-box .content p {
+  margin-bottom: 15px;
+}
+
+.accordian .content-box.active .content {
+  height: 150px;
+}

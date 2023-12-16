@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  background: whitesmoke;
+}
+#navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.hamburger-pointer {
+  cursor: pointer;
+}
+#navbar #logo {
+  width: 50%;
+}
+#navbar #logo a {
+  background-image: url(https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png);
+  background-repeat: no-repeat;
+  font-size: 0;
+  height: 40px;
+  width: 182px;
+  display: block;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#navbar nav {
+  width: 50%;
+}
+#navbar nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#side-navbar div {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+#navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#side-navbar .active {
+  background-color: #e5e8ec;
+}
+
+#side-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 14px;
+}
+#side-navbar a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 19px 20px;
+  color: #323a44;
+  transition: 0.3s;
+}
+
+#side-navbar a .fa-solid {
+  margin-right: 10px;
+}
+
+#side-navbar .change-city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#side-navbar .change-city .cityName {
+  font-size: 14px;
+  font-weight: bold;
+  color: #10a310;
+}
+
+#side-navbar .change-city > div {
+  color: #323a44;
+  font-size: 14px;
+}
+@media all and (max-width: 900px) {
+  #navbar nav ul {
+    width: 0;
+    font-size: 0;
+  }
+}
+
+/* navbar css ends */
+
+/* booking page css */
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+#container > #filter-box {
+  width: 20%;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  z-index: -1;
+  background-color: white;
+  padding: 25px 54px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 0px 1px 1px #e0e0e0;
+  font-size: 12px;
+}
+#container-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 90px;
+  right: 0px;
+  padding-left: -100px;
+  z-index: -1;
+}
+#cars-box {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin-top: 120px;
+  gap: 12px;
+  padding-right: 20px;
+}
+#cars-box > div {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #212121;
+  padding: 10px 60px 10px 12px;
+  cursor: pointer;
+  height: 120px;
+}
+#container-right .info-box {
+  background: #fff;
+  color: #212121;
+  height: 50px;
+  margin-bottom: -100px;
+  width: 90%;
+  padding: 20px 8px 20px 20px;
+}
+.info-box > .heading h5 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f1f1f;
+  margin-bottom: 7px;
+}
+.info-box > .text p {
+  font-size: 11px;
+  color: #a8a8a8;
+  letter-spacing: 0.4px;
+  padding-top: 0;
+}
+.heading-list {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1f1f1f;
+}
+
+.list-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 6px;
+}
+.list-items1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 6px;
+}
+.filtertext {
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+  cursor: default;
+}
+.text1 {
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+#filter5 {
+  padding: 0 15px;
+}
+
+#filter7 {
+  padding: 0 15px;
+}
+#filtersuv {
+  padding: 0 12px;
+}
+
+.line-between {
+  background-color: #e0e0e0;
+  width: 0.5px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-bluebox {
+  background-color: #f0f4ff;
+  color: #5160c2;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.bookBtn {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #10a310;
+  padding: 15px 38px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.price {
+  font-weight: 500;
+  color: #1f1f1f;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.bookBtn:hover {
+  background-color: #10a310;
+  color: #fff;
+}
+
+.carname {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.16px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
+  padding-bottom: 5px;
+}
+
+.ratings {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #1f1f1f;
+  font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
+  word-spacing: normal;
+  padding-bottom: 22px;
+}
+.delivery {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #1f1f1f;
+  font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
+}
+
+.detailsDiv {
+  margin-left: -180px;
+  padding: 20px 20px;
+}
+
+.carimage {
+  width: 200px;
+  height: auto;
+}
+
+.seatsFuelTransmission {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+  font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
+  padding-bottom: 15px;
+}
+.seatsFuelTransmission > p {
+  padding-right: 6px;
+}
+.list-box {
+  padding: 10px 25px;
+  border-radius: 4px;
+}
+
+@media all and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  #cars-box {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-top: 10x;
+    gap: 12px;
+  }
+  #cars-box > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #container > #container-right {
+    width: fit-content;
+  }
+  #container > #filter-box {
+    display: none;
+  }
+  #container-right .info-box {
+    width: 94%;
+  }
+  .bookBtn {
+    display: none;
+  }
+  .detailsDiv {
+    margin-left: -98px;
+    padding: 20px 20px;
+  }
+  .price {
+    display: none;
+  }
+}

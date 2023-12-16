@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .entermobnumber-at {
+        background-color: white;
+        height: 100%;
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 1px solid red; */
+        margin: auto;
+      }
+
+      .login-enterdiv-at {
+        /* border: 1px solid red; */
+        background-color: white;
+        /* height: 500px;
+            width: 700px; */
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+      }
+
+      .login-enterdiv-at > p {
+        font-size: 25px;
+        width: 50%;
+        margin: 1% auto;
+        /* padding: 1%; */
+        /* border: 1px solid purple; */
+        margin-bottom: 0px;
+        cursor: pointer;
+      }
+
+      #login-countryandnumber-at {
+        width: 50%;
+        margin: 2% auto;
+        /* border: 1px solid red; */
+      }
+
+      #modal-btn-at {
+        /* border: 1px solid red; */
+        width: 70%;
+        margin: auto;
+        display: flex;
+      }
+
+      #modal-btn-at > button {
+        width: 40%;
+        padding: 2%;
+        margin: auto;
+        margin-top: 30%;
+        border: none;
+        color: white;
+        background-color: rgb(226, 226, 226);
+        font-size: 18px;
+        border-radius: 3px;
+        cursor: none;
+      }
+
+      #login-countryandnumber-at > form > input {
+        width: 100%;
+        padding: 2%;
+        margin: 3% 0px 3% 0px;
+        border-radius: 3px;
+        border: 1px solid rgb(168, 168, 168);
+      }
+
+      #register-small-p-at {
+        font-size: 15px;
+        color: grey;
+      }
+
+      #login-countryandnumber-at > form > a {
+        text-decoration: none;
+        color: rgb(6, 188, 6);
+      }
+
+      #register-name-at:focus {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+      }
+
+      #signup-otp-modal-at {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #signup-otpsection-at {
+        background-color: white;
+        width: 40%;
+        border-radius: 6px;
+      }
+
+      #signup-otpsection-at > p {
+        text-align: center;
+        font-size: 25px;
+      }
+
+      #otp-imgdiv-at {
+        width: 15%;
+        margin: auto;
+      }
+
+      #otp-imgdiv-at > img {
+        width: 100%;
+        margin: 2%;
+      }
+
+      #otp-btn-div-at {
+        /* border: 1px solid red; */
+        width: 30%;
+        margin: auto;
+        margin-top: 7%;
+      }
+
+      #otp-btn-div-at > button {
+        /* border: 1px solid red; */
+        width: 95%;
+        padding: 6%;
+        margin: 5%;
+        background-color: rgb(6, 188, 6);
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="entermobnumber-at">
+      <div class="login-enterdiv-at">
+        <p id="modal-goback-at">&#8592;</p>
+        <p id="tex-at">Enter 6-Digit OTP</p>
+        <p id="register-small-p-at">OTP Was Sent To Your Mobile Number</p>
+        <div id="login-countryandnumber-at">
+          <form>
+            <input
+              type="text"
+              id="register-name-at"
+              placeholder="Enter OTP"
+              required
+            />
+            <a href="">Resend Otp</a>
+          </form>
+        </div>
+      </div>
+      <div id="modal-btn-at">
+        <button id="modal-button-at">Register</button>
+      </div>
+    </div>
+
+    <div id="signup-otp-modal-at">
+      <div id="signup-otpsection-at">
+        <div id="otp-imgdiv-at">
+          <img
+            src="https://www.kindpng.com/picc/m/164-1645081_computer-icons-check-mark-presentation-symbol-gif-animation.png"
+            alt=""
+          />
+        </div>
+        <p>Registered Successfully!!!</p>
+        <div id="otp-btn-div-at">
+          <button id="otp-button-at">Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("register-name-at")
+      .addEventListener("input", function () {
+        let otp = document.getElementById("register-name-at").value;
+        if (otp.length == 6) {
+          document.querySelector("#modal-button-at").style.background =
+            "rgb(6, 188, 6)";
+        }
+      });
+
+    document
+      .getElementById("modal-button-at")
+      .addEventListener("click", function () {
+        let otp = document.getElementById("register-name-at").value;
+        if (otp == "123456") {
+          document.querySelector("#signup-otp-modal-at").style.visibility =
+            "visible";
+        }
+      });
+
+    document
+      .getElementById("otp-button-at")
+      .addEventListener("click", function () {
+        location.href = "./index.html";
+      });
+
+    document
+      .getElementById("modal-goback-at")
+      .addEventListener("click", function () {
+        location.href = "./signup-2.html";
+      });
+  </script>
+</html>

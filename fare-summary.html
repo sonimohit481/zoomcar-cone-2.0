@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fare summary</title>
+    <link rel="stylesheet" href="fare-summary.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <a class="back-button" href="checkout.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+
+      <div id="carNameType"></div>
+    </div>
+
+    <div id="details-box">
+      <div class="payment">
+        <div>Trip Fare (Unlimited KMs without Fuel)</div>
+        <div class="tripfare">₹1,751</div>
+      </div>
+
+      <div class="payment">
+        <div>Damage Protection Fee</div>
+        <div>+ ₹211</div>
+      </div>
+      <div class="payment">
+        <div class="tfare">Total Fare</div>
+        <div class="totalfare">₹1,962</div>
+      </div>
+      <div class="payment">
+        <div>
+          <div>Refundable Deposit</div>
+          <div>Has been waived off for this booking</div>
+        </div>
+        <div>+ ₹0</div>
+      </div>
+      <div class="payment">
+        <div class="ffare">Final Fare</div>
+        <div class="finalfare">₹1,962</div>
+      </div>
+    </div>
+
+    <div id="payment-footer">
+      <a href="payments.html"
+        ><button id="pay-btn">PROCEED TO PAY ₹1,678</button></a
+      >
+    </div>
+  </body>
+  <script src="fare-summary.js"></script>
+</html>

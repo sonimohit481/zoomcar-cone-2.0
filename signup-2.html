@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .entermobnumber-at{
+            background-color: white;
+            height: 100%;
+            width: 94%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           /* border: 1px solid red; */
+           margin: auto;
+        }
+        .login-enterdiv-at{
+            /* border: 1px solid red; */
+            background-color: white;
+            /* height: 500px;
+            width: 700px; */
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
+        .login-enterdiv-at>p{
+            font-size: 25px;
+            width: 50%;
+            margin: 1% auto;
+            /* padding: 1%; */
+            /* border: 1px solid purple; */
+            margin-bottom: 0px;
+            cursor: pointer;
+        }
+        #login-countryandnumber-at{
+            width:50%;
+            margin: 2% auto;
+            /* border: 1px solid red; */
+        }
+        
+
+
+
+
+
+        #modal-btn-at{
+            /* border: 1px solid red; */
+            width: 70%;
+            margin:auto ;
+            display: flex;
+        }
+        #modal-btn-at>button{
+            width: 40%;
+            padding: 2%;
+            margin:auto;
+            margin-top:30% ;
+            border: none;
+            color:white ;
+            background-color: rgb(226, 226, 226);
+            font-size: 18px;
+            border-radius: 3px;
+            cursor: none;
+        }
+        #login-countryandnumber-at>form>input{
+            width: 100%;
+            padding: 2%;
+            margin: 3% 0px 3% 0px;
+            border-radius: 3px;
+            border: 1px solid rgb(168, 168, 168);
+        }
+        
+        #register-small-p-at{
+            font-size: 15px;
+            color: grey;
+        }
+        #register-name-at:focus{
+            outline: none !important;
+            border: 2px solid rgb(6, 188, 6);
+            border-radius: 3px;
+        }
+        #register-password-at:focus{
+            outline: none !important;
+            border: 2px solid rgb(6, 188, 6);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="entermobnumber-at">
+        <div class="login-enterdiv-at">
+            <p id="modal-goback-at">&#8592;</p>
+            <p id="tex-at">Fill In A Few More Details</p>
+            <p id="register-small-p-at">one last step to create a new account</p>
+            <div id="login-countryandnumber-at">
+                <form>
+                <input type="text" id="register-name-at"  placeholder="Enter Name (As Per Your Driving License" required/>
+                <input type="password" id="register-password-at" placeholder="Password (Atleast 6 Charecters)" required />
+                </form>
+            </div>
+        </div>
+        <div id="modal-btn-at"><button id="modal-button-at">Register</button></div>
+    </div>
+</body>
+<script>
+
+
+    document.getElementById("register-password-at").addEventListener("input",function(){
+        let pass = document.querySelector("#register-password-at").value;
+        // let email = document.querySelector("#register-name-at").value;
+        if(pass.length>5){
+            document.querySelector("#modal-button-at").style.background = "rgb(6, 188, 6)";
+        }
+    });
+
+    document.getElementById("modal-goback-at").addEventListener("click",function(){
+        location.href="./signup-1.html";
+    });
+
+    document.getElementById("modal-button-at").addEventListener("click",function(){
+        event.preventDefault();
+        let name = document.querySelector("#register-name-at").value;
+        let password = document.querySelector("#register-password-at").value;
+
+        let phone = JSON.parse(localStorage.getItem("mobilenumber"));
+        let email = JSON.parse(localStorage.getItem("email"));
+        
+        let registeredusers = JSON.parse(localStorage.getItem("registeredusers"));
+        // if(registeredusers == null){
+        //     localStorage.setItem()
+        // }
+        let data = {
+            name:name,
+            email:email,
+            phone:parseInt(phone),
+            password:password,
+            status:"not active"
+        };
+
+        registeredusers.push(data);
+        localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
+        localStorage.removeItem("mobilenumber");
+        localStorage.removeItem("email");
+        location.href = "./signup-otp-form.html";
+    });
+
+
+
+</script>
+</html>

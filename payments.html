@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Self Drive Car Rentals</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #payments-navbar-at {
+        background-color: rgb(23, 23, 23);
+      }
+
+      #navbar-section-1-at {
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid purple; */
+      }
+
+      #navbar-section-1-at > p {
+        color: white;
+        /* border: 1px solid red; */
+        /* margin: 1%; */
+        padding: 1%;
+        margin: 0px 1% 0px 1%;
+        font-size: 18px;
+      }
+
+      #navbar-section-1-at > div {
+        margin: 0px 2% 0px 1%;
+        /* border: 1px solid green; */
+        width: 20%;
+      }
+
+      #navbar-section-1-at > div > p {
+        color: white;
+        /* border: 1px solid yellow; */
+        margin: 1.3%;
+        font-size: 18px;
+      }
+
+      #paymentoptions-at {
+        width: 35%;
+        /* border: 2px solid red; */
+        margin: auto;
+        margin-top: 2%;
+      }
+
+      .payment-icon-at > span {
+        /* border: 1px solid purple; */
+        width: 5%;
+        font-size: 2rem;
+        margin: 1% 0px 2% 0px;
+        color: rgb(126, 126, 126);
+      }
+
+      .payment-icon-at > div {
+        /* border: 1px solid blue; */
+        margin: 0px 0px 0px 2%;
+        margin: 1% 0px 2% 3%;
+        width: 60%;
+      }
+
+      .payment-text-at {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .payment-text-at > p:nth-child(1) {
+        font-size: 16px;
+      }
+
+      .payment-text-at > p:nth-child(2) {
+        font-size: 13px;
+        color: rgb(156, 156, 156);
+      }
+
+      .payment-icon-at {
+        display: flex;
+        /* border: 1px solid rgb(210, 158, 2); */
+        border-bottom: 1px solid rgb(192, 192, 192);
+        margin: 2% 0px 2% 0px;
+        cursor: pointer;
+      }
+
+      #payment-modal-bg-at {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+      }
+
+      #payment-modal-at {
+        width: 35%;
+        margin: auto;
+        background-color: white;
+        padding: 1%;
+        border-radius: 10px;
+      }
+
+      #payment-modal-at > form {
+        margin-top: 3%;
+        /* border: 1px solid purple; */
+      }
+
+      #payment-modal-at > form > input:nth-child(1) {
+        width: 89.3%;
+        padding: 3%;
+        margin: 2%;
+        border-radius: 3px;
+        border: 1px solid rgb(180, 180, 180);
+      }
+
+      #payment-modal-at > form > input:nth-child(2) {
+        width: 40%;
+        padding: 3%;
+        margin: 2% 1% 2% 2%;
+        border-radius: 3px;
+        border: 1px solid rgb(180, 180, 180);
+      }
+
+      #payment-modal-at > form > input:nth-child(3) {
+        width: 40%;
+        padding: 3%;
+        margin: 1%;
+        border-radius: 3px;
+        border: 1px solid rgb(180, 180, 180);
+      }
+
+      #payment-modal-at > form > button {
+        padding: 3%;
+        margin: 2%;
+        width: 95.6%;
+        font-size: 17px;
+        border-radius: 3px;
+        border: 1px solid rgb(180, 180, 180);
+        font-weight: 700;
+        color: grey;
+        cursor: pointer;
+      }
+
+      #payment-modal-at > p {
+        margin: 3%;
+      }
+
+      #payment-modal-at > p {
+        font-size: 20px;
+      }
+
+      #payment-modal-at > p:nth-child(2) {
+        font-size: 15px;
+        color: rgb(152, 152, 152);
+        margin-top: 0px;
+      }
+
+      #payment-modal-at > p:nth-child(1) {
+        margin-bottom: 1%;
+      }
+
+      #payment-modal-img-at {
+        position: relative;
+        bottom: 16%;
+        right: 35%;
+        width: 3%;
+      }
+
+      .inp-at:focus {
+        outline: none !important;
+        border: 2px solid rgb(6, 188, 6);
+        border-radius: 3px;
+      }
+
+      #cardnumber-at {
+        font-size: 18px;
+      }
+
+      #expiry-at {
+        font-size: 18px;
+      }
+
+      #cvv-at {
+        font-size: 18px;
+      }
+
+      #paymentdone-modal-bg-at {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+      }
+
+      #paymentdone-modal-at {
+        width: 35%;
+        margin: auto;
+        background-color: white;
+        padding: 1%;
+        border-radius: 10px;
+      }
+
+      #paymentdone-modal-at > p {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 2%;
+      }
+
+      #payment-imgdiv-at {
+        width: 15%;
+        margin: auto;
+      }
+
+      #payment-imgdiv-at > img {
+        width: 100%;
+        margin: 3%;
+      }
+
+      #paymentdone-btn-div-at {
+        width: 30%;
+        margin: auto;
+        margin-top: 7%;
+      }
+
+      #paymentdone-btn-div-at > button {
+        width: 95%;
+        padding: 6%;
+        margin: 5%;
+        background-color: rgb(6, 188, 6);
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="payments-main-cont-at">
+      <div id="payments-navbar-at">
+        <div id="navbar-section-1-at">
+          <p>&#8592;</p>
+          <div>
+            <p>Price To Pay</p>
+            <p>From date -- to date</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="paymentoptions-at">
+        <div id="credit-card-at" class="payment-icon-at">
+          <span class="material-icons"> paymentoptions </span>
+          <div id="credittext-at" class="payment-text-at">
+            <p>Credit/Debit/ATM Card</p>
+            <p>All major card providers are supported</p>
+          </div>
+        </div>
+
+        <div id="netbanking-at" class="payment-icon-at">
+          <span class="material-icons"> account_balance </span>
+          <div id="credittext-at" class="payment-text-at">
+            <p>Netbanking</p>
+            <p>All major banks are supported</p>
+          </div>
+        </div>
+
+        <div id="wallet-at" class="payment-icon-at">
+          <span class="material-icons"> account_balance_wallet </span>
+          <div id="credittext-at" class="payment-text-at">
+            <p>Mobile Wallet</p>
+            <p>payTM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------Modal After Clicking Credit Card Option---------------------------------------------------- -->
+
+    <div id="payment-modal-bg-at">
+      <div id="payment-modal-at">
+        <p>Enter Card Details</p>
+        <p id="amount">Amount: amount to be paid</p>
+        <form>
+          <input
+            type="tel"
+            id="cardnumber-at"
+            placeholder="Enter Card Number"
+            class="inp-at"
+            maxlength="25"
+          />
+          <input
+            type="tel"
+            id="expiry-at"
+            placeholder="Expiry date (MM/YY)"
+            class="inp-at"
+            maxlength="7"
+          />
+          <input
+            type="password"
+            id="cvv-at"
+            placeholder="CVV"
+            class="inp-at"
+            maxlength="3"
+          />
+          <button id="payment-btn-at">Pay</button>
+        </form>
+      </div>
+      <img
+        src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png"
+        id="payment-modal-img-at"
+      />
+    </div>
+    <!-- ------------------------------------after clicking pay-------------------------------------------------------------------------------- -->
+
+    <div id="paymentdone-modal-bg-at">
+      <div id="paymentdone-modal-at">
+        <div id="payment-imgdiv-at">
+          <img
+            src="https://www.kindpng.com/picc/m/164-1645081_computer-icons-check-mark-presentation-symbol-gif-animation.png"
+            alt=""
+          />
+        </div>
+        <p>Your Booking Is Successfull</p>
+        <div id="paymentdone-btn-div-at">
+          <button id="otp-button-at">Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // -------------------Modal Events--------------------
+    document
+      .getElementById("cardnumber-at")
+      .addEventListener("focus", function () {
+        let inp = document.querySelector("#cardnumber-at");
+        inp.style.outline = "none !important";
+        inp.style.border = "2px solid green";
+      });
+
+    document.getElementById("expiry-at").addEventListener("focus", function () {
+      let inp = document.querySelector("#expiry-at");
+      inp.style.outline = "none !important";
+      inp.style.border = "2px solid green";
+    });
+
+    document.getElementById("cvv-at").addEventListener("focus", function () {
+      let inp = document.querySelector("#cvv-at");
+      inp.style.outline = "none !important";
+      inp.style.border = "2px solid green";
+    });
+
+    document
+      .getElementById("cardnumber-at")
+      .addEventListener("input", function () {
+        let input = document.querySelector("#cardnumber-at").value;
+        let input1 = document.querySelector("#cardnumber-at");
+        if (input.length == 4 || input.length == 11 || input.length == 18) {
+          input += " - ";
+        }
+        input1.value = input;
+      });
+
+    document.getElementById("expiry-at").addEventListener("input", function () {
+      let inpu = document.querySelector("#expiry-at").value;
+      let inpu1 = document.querySelector("#expiry-at");
+      if (inpu.length == 2) {
+        inpu += " / ";
+      }
+      inpu1.value = inpu;
+    });
+    document.getElementById("cvv-at").addEventListener("input", function () {
+      let card = document.querySelector("#cardnumber-at").value;
+      let expiry = document.querySelector("#expiry-at").value;
+      let cvv = document.querySelector("#cvv-at").value;
+
+      if (card.length == 25 && expiry.length == 7 && cvv.length == 3) {
+        document.querySelector("#payment-btn-at").style.background =
+          "rgb(6, 188, 6)";
+        document.querySelector("#payment-btn-at").style.color =
+          "rgb(256, 256, 256)";
+      }
+    });
+
+    document
+      .getElementById("credit-card-at")
+      .addEventListener("click", function () {
+        document.querySelector("#payment-modal-bg-at").style.visibility =
+          "visible";
+      });
+
+    document
+      .getElementById("paymentdone-btn-div-at")
+      .addEventListener("click", function () {
+        location.href = "./index.html";
+      });
+
+    document
+      .getElementById("payment-btn-at")
+      .addEventListener("click", function () {
+        event.preventDefault();
+        document.querySelector("#payment-modal-bg-at").style.visibility =
+          "hidden";
+        document.querySelector("#paymentdone-modal-bg-at").style.visibility =
+          "visible";
+      });
+
+    // -----------------Modal Events End-------------------
+
+    let totalFare = localStorage.getItem("TOTALFARE");
+
+    document.getElementById("amount").innerText =
+      "Amount: " + " " + "₹" + totalFare;
+  </script>
+</html>

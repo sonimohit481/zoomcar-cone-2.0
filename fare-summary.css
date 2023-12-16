@@ -1,0 +1,91 @@
+body {
+  margin: auto;
+  overflow-x: hidden;
+}
+
+#navbar {
+  background-color: #000;
+  padding: 0px 16px;
+  min-height: 56px;
+  color: #383838;
+  font-size: 26px;
+  display: flex;
+}
+#navbar #carNameType {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: rgb(255, 255, 255);
+  margin-left:20px;
+
+}
+#navbar > div {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+#navbar .back-button {
+  color: #fff;
+}
+
+#payment-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%),
+    0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+#payment-footer a{
+  text-decoration:none;
+
+}
+#pay-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: #10a310;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 18px;
+  width: 600px;
+}
+
+#details-box {
+  margin: auto;
+  width: 50%;
+}
+.payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cecece;
+}
+.payment > div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.tfare,
+.ffare {
+  font-weight: bolder;
+}
+.totalfare,
+.finalfare {
+  font-weight: bolder;
+}

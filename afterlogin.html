@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* background-color: rgb(233, 233, 233); */
+            color: rgb(74, 74, 74);
+        }
+
+        body {
+            background-color: rgb(243, 243, 243);
+        }
+
+        #afterlogin-container-at {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            /* border: 1px solid red; */
+            /* box-sizing: border-box; */
+        }
+
+        #afterleftsection-at {
+            width: 27%;
+            /* height: 100vh; */
+            margin: 0.7%;
+            /* padding: 1%; */
+            border-radius: 3px;
+            /* border: 1px solid purple; */
+            background-color: white;
+        }
+
+        #afterrightsection-at {
+            width: 70%;
+            /* height: 100vh; */
+            background-color: white;
+            margin: 0.7%;
+            /* padding: 1%; */
+            border-radius: 3px;
+            /* border: 1px solid purple; */
+        }
+
+        .material-icons-outlined {
+            font-size: 90px;
+        }
+
+        #letftopsec-at {
+            border-bottom: 1px solid rgb(224, 224, 224);
+            width: 96%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            /* border: ; */
+        }
+
+        #letftopsec-at>p {
+            margin: 1.7%;
+        }
+
+        #verifysec-at {
+            border-bottom: 1px solid rgb(224, 224, 224);
+            width: 96%;
+            margin: auto;
+        }
+
+        #verifysec-at>div {
+            margin: 3%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #verifysec-at>div>p {
+            width: 80%;
+            /* border: 1px solid violet; */
+            font-size: 17px;
+        }
+
+        .material1 {
+            color: red;
+            font-size: 1.5rem;
+            /* border: 1px solid red; */
+            width: 10%;
+
+        }
+
+        .material2 {
+            color: green;
+            font-size: 1.4rem;
+            /* border: 1px solid red; */
+            width: 10%;
+        }
+
+        .material3 {
+            font-size: 1.8rem;
+            width: 10%;
+            margin: 2%;
+            /* border: 1px solid red; */
+        }
+
+        .afterlogincomm-at>div {
+            margin: 4%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* border: 1px solid red; */
+            border-bottom: 0.7px solid rgb(203, 203, 203);
+        }
+
+        .afterlogincomm-at>div>p {
+            font-size: 18px;
+            width: 43%;
+            /* border: 1px solid yellow; */
+            /* margin: 1%; */
+            margin: 1%;
+        }
+
+        .afterlogincomm-at>div>div {
+
+            width: 60%;
+            /* border: 1px solid yellow; */
+            margin-left: 17%;
+        }
+
+        .spe-at {
+            display: flex;
+            color: rgb(149, 149, 4);
+            align-items: center;
+            justify-content: end;
+            /* margin-right: 1%; */
+            /* border: 1px solid red; */
+            padding: 2%;
+            font-size: 14px;
+        }
+
+        .spe1-at {
+            font-size: 1.1rem;
+            color: green;
+        }
+
+        #spep-at {
+            color: green;
+        }
+
+        #rightheading-at {
+            text-align: center;
+            border-bottom: 0.7px solid rgb(203, 203, 203);
+            font-size: 1.8rem;
+            padding: 1%;
+            color: black;
+        }
+
+        #rightmain-at {
+            width: 96%;
+            margin: auto;
+            margin-top: 2%;
+        }
+
+        #rightmain-at>div>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            margin: 3% 0px 3% 0px;
+            /* border: 1px solid red; */
+        }
+
+        #rightmain-at>div>div:nth-child(2)>label {
+            width: 13%;
+            font-size: 0.9rem;
+        }
+
+        #rightmain-at>div>div:nth-child(3) {
+            display: flex;
+            flex-direction: row;
+            margin: 3% 0px 3% 0px;
+            /* border: 1px solid red; */
+            /* align-items: center; */
+        }
+
+        #rightmain-at>div>div:nth-child(3)>label {
+            width: 13%;
+            font-size: 0.9rem;
+        }
+
+        #rightmain-at>div>div:nth-child(3)>input {
+            padding: 0.5%;
+            width: 20%;
+        }
+        #rightmain-at>div>div:nth-child(3)>select {
+            padding: 0.5%;
+            width: 20%;
+        }
+
+        .insidehead {
+            padding-bottom: 1%;
+            font-size: 1.4rem;
+            border-bottom: 0.7px solid rgb(203, 203, 203);
+            color: black;
+        }
+        #plsh{
+            font-size: 1.3rem;
+        }
+        #updatebtn-at{
+            width: 15%;
+            text-align: center;
+            margin: auto;
+            border: 0.8px solid black;
+            padding: 1%;
+            cursor: pointer;
+        }
+
+        /* ------------------------------navbarcss-------------------------------------- */
+        body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+}
+#navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.hamburger-pointer {
+  cursor: pointer;
+}
+#navbar #logo {
+  width: 50%;
+}
+#navbar #logo a {
+  background-image: url(https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png);
+  background-repeat: no-repeat;
+  font-size: 0;
+  height: 40px;
+  width: 182px;
+  display: block;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#navbar nav {
+  width: 50%;
+}
+#navbar nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#side-navbar div {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+#navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#side-navbar .active {
+  background-color: #e5e8ec;
+}
+
+#side-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 14px;
+}
+#side-navbar a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 19px 20px;
+  color: #323a44;
+  transition: 0.3s;
+}
+
+#side-navbar a .fa-solid {
+  margin-right: 10px;
+}
+
+#side-navbar .change-city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#side-navbar .change-city .cityName {
+  font-size: 14px;
+  font-weight: bold;
+  color: #10a310;
+}
+
+#side-navbar .change-city > div {
+  color: #323a44;
+  font-size: 14px;
+}
+/* mohit's */
+#pic {
+  display: flex;
+  background-image: url("https://www.zoomcar.com/img/bg-desktop.png");
+  background-size: 100% 100%;
+  height: 600px;
+  width: 100%;
+  margin: auto;
+}
+#pic div {
+  margin: 0 auto;
+  margin-top: 25%;
+}
+
+#pic form {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#pic form > input {
+  margin-bottom: 18px;
+  border: none;
+  outline: none;
+  border: 0.5 px solid #e5e8ec;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  overflow: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 6px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#pic form a {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* popup for trip start time */
+
+#pic label {
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+#findCars-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 0;
+  background-color: #10a310;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+@media (max-width: 3470px) {
+  .promo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 65%;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .promo > div {
+    display: grid;
+    width: 100%;
+    margin: auto;
+  }
+  .promo > div > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+  #f {
+    width: 65%;
+    margin: 20px auto;
+  }
+  #f > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .promo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .promo > div {
+    width: 100%;
+    margin: auto;
+  }
+  .promo > div > img {
+    width: 100%;
+  }
+  #f {
+    width: 80%;
+    margin: 20px auto;
+  }
+  #f > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+  #navbar nav ul {
+    width: 0;
+    font-size: 0;
+  }
+}
+@media (max-width: 786px) {
+  .promo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 95%;
+    margin: auto;
+  }
+  .promo > div {
+    width: 100%;
+    margin: auto;
+  }
+  .promo > div > img {
+    width: 100%;
+  }
+  #f {
+    width: 95%;
+    margin: 20px auto;
+  }
+  #f > img {
+    border-radius: 9px;
+    width: 100%;
+  }
+}
+/*   login section css      */
+#chandan {
+  width: 100%;
+  overflow: hidden;
+}
+#loginsetion {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  padding: 100px 0px;
+  flex-wrap: wrap;
+  background-color: rgb(235, 235, 240);
+  position: relative;
+  z-index: -1;
+}
+#refer {
+  position: relative;
+  display: flex;
+  height: 150px;
+  max-width: 1000px;
+  width: 500px;
+  min-width: 900px;
+  margin: 10px;
+  border: 1.5px solid rgb(190, 181, 181);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+#loginsection img {
+  width: 40px;
+}
+#imgsidecontent > p{
+  line-height: 1.5;
+  color: #666;
+  font-size: 14px;
+ 
+}
+#imgsidecontent {
+  position: absolute;
+  top: 30px;
+  font-size: 12px;
+  left: 180px;
+}
+#imgsidecontent a {
+  text-decoration: none;
+  color: black;
+}
+/*scroll section csss------------------*/
+#scrollsectionouter {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#scrollsection {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#scrollsection::-webkit-scrollbar {
+  display: none;
+}
+
+#scrollsection img {
+  width: 280px;
+  height: fit-content;
+  margin: 8px;
+  border: 0.3px solid rgb(187, 181, 181);
+}
+/* ------------about section css----------------*/
+#aboutsection {
+  width: 100%;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+#aboutsection .centerp {
+  width: 100%;
+  border: 0.1px solid rgb(233, 231, 231);
+  text-align: center;
+  padding: 12px 0px;
+}
+
+.about {
+  width: 80%;
+  margin: auto;
+}
+.about p {
+  text-align: left;
+  color: #1f1f1f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#aboutsection h6 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+
+#spanspan-at{
+  font-size: 1.6rem;
+}
+#loginn-at{
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+/*---------------------------footer section-----------------------*/
+.footer {
+  width: 30%;
+  margin: auto;
+  padding: 35px 0 20px 0;
+  font-size: smaller;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="hamburger-pointer"  id = "openNav" onclick = "openNav()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div id="logo">
+          <a href = "index.html" >ZOOMCAR</a>
+        </div>
+        <nav id="navnav-at">
+          <ul>
+            <li>
+              <a href="host.html">Become a Host</a>
+            </li>
+            <li>
+              <a href="">ZMS</a>
+            </li>
+            <li>
+              <a href="login.html" id="loginn-at">Login/Signup</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+
+      <div id = "main">
+
+      </div>
+  
+      <div id="side-navbar">
+       
+        <a href="" class = "active"><i class="fa-solid fa-user"></i>Login or Signup</a>
+  
+        <a href="" class = "change-city">
+          <div>
+            <i class="fa-solid fa-location-dot"></i></i> Change  City
+          </div>
+  
+          <div class = "cityName">
+                Bangalore
+          </div>
+        
+        </a>
+        <a href="">Supermiler club</a>
+        <a href=""><i class="fa-solid fa-file-lines"></i>Zoomcar Fleet Vehicles Policies </a>
+        <a href=""><i class="fa-solid fa-file-lines"></i>Zoomcar Host Vehicles Policies</a>
+        <a href=""><i class="fa-solid fa-phone"></i>Help & Support</a>
+        
+      </div>
+
+
+
+
+
+    <!-- -----------------------------main-------------------------------------- -->
+    <div id="afterlogin-container-at">
+
+
+        <div id="afterleftsection-at">
+            <div id="letftopsec-at">
+                <span class="material-icons-outlined">
+                    account_circle
+                </span>
+                <p id="left-user-name">User Name</p>
+                <p id="left-mobile-number">Mobile Number</p>
+                <p id="left-email-id">Email id</p>
+            </div>
+            <div id="verifysec-at">
+                <div>
+                    <span class="material-icons material1">
+                        dangerous
+                    </span>
+                    <p>Profile Document</p>
+                </div>
+                <div>
+                    <span class="material-icons material2">
+                        check_circle
+                    </span>
+                    <p>Mobile Number</p>
+                </div>
+                <div>
+                    <span class="material-icons material1">
+                        dangerous
+                    </span>
+                    <p>Paytm Wallet</p>
+                </div>
+            </div>
+
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                        paid
+                    </span>
+                    <span></span>
+                    <p>Z-Points</p>
+                    <div class="spe-at">Install App For Z-Points</div>
+                </div>
+
+            </div>
+
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                        paid
+                    </span>
+                    <p>Credits</p>
+                    <div class="spe-at spe1-at">&#8377; 0</div>
+                </div>
+
+            </div>
+
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                        account_balance_wallet
+                    </span>
+                    <p>Paytm Wallet</p>
+                    <div class="spe-at spe1-at">Link Wallet</div>
+                </div>
+
+            </div>
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                    </span>
+                    <p>My Bookings</p>
+                </div>
+
+            </div>
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                    </span>
+                    <p>Saved Cards</p>
+                </div>
+
+            </div>
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3 circle">
+                    </span>
+                    <!-- <span id="spespan">123</span> -->
+                    <p id="spep-at">Account</p>
+                </div>
+
+            </div>
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                    </span>
+                    <p>Profile Verification</p>
+                </div>
+
+            </div>
+            <div class="afterlogincomm-at">
+                <div>
+                    <span class="material-icons-outlined material3">
+                    </span>
+                    <p>Co-Driver</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- ---------------------RightSection------------------------------ -->
+        <div id="afterrightsection-at">
+            <p id="rightheading-at">My Account</p>
+            <div id="rightmain-at">
+                <div>
+                    <div class="insidehead">Account Details</div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <p id="right-email-at">Email@email.com</p>
+                    </div>
+                    <div>
+                        <label for="mobile">Mobile* :</label>
+                        <input type="text" id="mob-num-at" />
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="insidehead">Personal Details</div>
+                    <div>
+                        <label for="name">Name* :</label>
+                        <p>User's Full Name</p>
+                    </div>
+                    <div>
+                        <label for="mobile">Gender* :</label>
+                        <select name="gender" id="gender">
+                            <!-- <option value="gender" selected disabled>Gender</option> -->
+                            <option value="male" selected>Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="insidehead">Location Details</div>
+                    <span id="plsh-at">Please Share Your Current City for optiimized experience</span>
+                    <div>
+                        <label for="email">City :</label>
+                        <select name="gender" id="gender">
+                            <!-- <option value="gender" selected disabled>City</option> -->
+                            <option value="pune">Pune</option>
+                            <option value="banglore" selected>Banglore</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="manglore">Manglore</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="kolkata">Kolkata</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="updatebtn-at">Update</div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+<script>
+    let userinfo = JSON.parse(localStorage.getItem("userinfo"));
+    let leftname = document.getElementById("left-user-name");
+    leftname.innerText = userinfo.name;
+    leftname.style.fontSize = "26px";
+    let leftnumber = document.getElementById("left-mobile-number");
+    leftnumber.innerText = userinfo.phone;
+    leftnumber.style.fontSize = "15px";
+    let leftemail = document.getElementById("left-email-id");
+    leftemail.innerText = userinfo.email;
+    leftemail.style.fontSize = "15px";
+
+    let rightemail = document.getElementById("right-email-at");
+    rightemail.innerText = userinfo.email;
+    // let rightnumber = document.getElementById("mob-num-at");
+    document.getElementById("mob-num-at").placeholder = `${userinfo.email}`;
+
+
+
+    function openNav() {
+  document.getElementById("side-navbar").style.width = "400px";
+
+  document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.6)";
+  document.getElementById("main").style.width = "100vw";
+  document.getElementById("main").style.height = "100vh";
+  document.getElementById("main").style.position = "fixed";
+  document.getElementById("main").style.top = "0";
+  document.getElementById("main").style.left = "0";
+
+  document.getElementById("main").addEventListener("click", () => {
+    closeNav();
+  });
+}
+
+function closeNav() {
+  document.getElementById("side-navbar").style.width = "0";
+  document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0)";
+  document.getElementById("main").style.width = "0";
+  document.getElementById("main").style.height = "0";
+  document.getElementById("main").style.position = "none";
+  document.getElementById("main").style.top = "0";
+  document.getElementById("main").style.left = "0";
+}
+
+userinfo = JSON.parse(localStorage.getItem("userinfo"));
+if (userinfo != null) {
+  let ele = document.getElementById("loginn-at");
+  ele.innerHTML = ` <a href="afterlogin.html" id="loginn-at">${userinfo.name} &nbsp; &nbsp;<span class="material-icons-outlined" id="spanspan-at">
+  account_circle
+  </span></a>`;
+}
+  </script>
+</html>
