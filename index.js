@@ -6,7 +6,8 @@ function openNav() {
   document.getElementById("main").style.height = "100vh";
   document.getElementById("main").style.position = "fixed";
   document.getElementById("main").style.top = "0";
-  document.getElementById("main").style.left = "0";
+  document.getElementById("main").style.bottom = "0";
+  document.getElementById("main").style.right = "0";
 
   document.getElementById("main").addEventListener("click", () => {
     closeNav();
