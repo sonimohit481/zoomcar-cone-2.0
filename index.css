@@ -3,9 +3,10 @@ body {
     Arial, sans-serif;
   margin: auto;
 }
+
 #navbar {
   background-color: #000;
-  color: #fff;
+  color: #7fd858;
   padding: 16px;
   display: flex;
   align-items: center;
@@ -13,16 +14,11 @@ body {
   margin-bottom: 30px;
 }
 
-.hamburger-pointer {
-  cursor: pointer;
-}
 #navbar #logo {
   width: 50%;
 }
+
 #navbar #logo a {
-  background-image: url(https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png);
-  background-repeat: no-repeat;
-  font-size: 0;
   height: 40px;
   width: 182px;
   display: block;
@@ -30,9 +26,15 @@ body {
   margin-left: 20px;
 }
 
+#navbar > #logo > a > img {
+  width: 200px;
+  margin-top: -70px;
+}
+
 #navbar nav {
   width: 50%;
 }
+
 #navbar nav ul {
   display: flex;
   justify-content: space-around;
@@ -41,18 +43,9 @@ body {
   font-size: 18px;
 }
 
-#side-navbar div {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 25px;
-}
 #navbar nav ul li a {
-  color: #fff;
+  color: #7fd858;
   text-decoration: none;
-}
-
-#side-navbar .active {
-  background-color: #e5e8ec;
 }
 
 #side-navbar {
@@ -69,6 +62,7 @@ body {
   transition: 0.5s;
   font-size: 14px;
 }
+
 #side-navbar a {
   text-decoration: none;
   cursor: pointer;
@@ -97,7 +91,8 @@ body {
   color: #323a44;
   font-size: 14px;
 }
-/* mohit's */
+
+/* Mohit's Section */
 #pic {
   display: flex;
   background-image: url("https://www.zoomcar.com/img/bg-desktop.png");
@@ -106,9 +101,10 @@ body {
   width: 100%;
   margin: auto;
 }
+
 #pic div {
   margin: 0 auto;
-  margin-top: 25%;
+  margin-top: 20%;
 }
 
 #pic form {
@@ -116,6 +112,9 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
+  background-color: #9ac289;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 #pic form > input {
@@ -133,12 +132,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+
 #pic form a {
   text-align: center;
   text-decoration: none;
 }
 
-/* popup for trip start time */
+/* Popup for trip start time */
 
 #pic label {
   font-size: 14px;
@@ -186,6 +186,9 @@ body {
     width: 100%;
   }
 }
+
+/* Media Queries for Responsive Design */
+
 @media (max-width: 900px) {
   .promo {
     display: grid;
@@ -215,6 +218,7 @@ body {
     font-size: 0;
   }
 }
+
 @media (max-width: 786px) {
   .promo {
     display: grid;
@@ -239,11 +243,13 @@ body {
     width: 100%;
   }
 }
-/*   login section css      */
-#chandan {
+
+/* Login Section CSS */
+#Lowersection {
   width: 100%;
   overflow: hidden;
 }
+
 #loginsetion {
   display: flex;
   margin: auto;
@@ -255,6 +261,7 @@ body {
   position: relative;
   z-index: -1;
 }
+
 #refer {
   position: relative;
   display: flex;
@@ -267,31 +274,37 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: white;
 }
+
 #loginsection img {
   width: 40px;
 }
+
 #imgsidecontent > p {
   line-height: 1.5;
   color: #666;
   font-size: 14px;
 }
+
 #imgsidecontent {
   position: absolute;
   top: 30px;
   font-size: 12px;
   left: 180px;
 }
+
 #imgsidecontent a {
   text-decoration: none;
   color: black;
 }
-/*scroll section csss------------------*/
+
+/* Scroll Section CSS */
 #scrollsectionouter {
   padding: 10px 20px;
   width: 100%;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 #scrollsection {
   margin: auto;
   width: 80%;
@@ -300,6 +313,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 #scrollsection::-webkit-scrollbar {
   display: none;
 }
@@ -324,14 +338,15 @@ body {
   margin: 8px;
   border: 0.3px solid rgb(187, 181, 181);
 }
-/* ------------about section css----------------*/
+
+/* About Section CSS */
 #aboutsection {
   width: 100%;
   justify-content: center;
   background-color: #f5f5f5;
-  margin-top: -35px;
-  padding-top: 25px;
+  padding: 20px 0px;
 }
+
 #aboutsection .centerp {
   width: 100%;
   border: 0.1px solid rgb(233, 231, 231);
@@ -343,12 +358,14 @@ body {
   width: 80%;
   margin: auto;
 }
+
 .about p {
   text-align: left;
   color: #1f1f1f;
   font-size: 12px;
   line-height: 1.5;
 }
+
 #aboutsection h6 {
   margin-bottom: 8px;
   font-size: 14px;
@@ -359,30 +376,33 @@ body {
 #spanspan-at {
   font-size: 1.6rem;
 }
+
 #loginn-at {
   display: flex;
   align-items: center;
   width: 100%;
 }
-/*---------------------------footer section-----------------------*/
+
+/* Footer Section */
 .footer {
   width: 30%;
   margin: auto;
-  padding: 35px 0 20px 0;
+  padding: 10px 0px;
   font-size: smaller;
 }
 
-/* login on navbar */
-
+/* Login on Navbar */
 #spanspan-at {
   font-size: 1.6rem;
 }
+
 #loginn-at {
   display: flex;
   align-items: center;
   width: 100%;
 }
-/* about us dropdown */
+
+/* About Us Dropdown */
 .accordian {
   width: 100%;
 }
@@ -401,7 +421,7 @@ body {
   font-size: 14px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   border: 0.2px solid #cecece;
 }
 
@@ -434,6 +454,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .accordian a {
   text-decoration: none;
   font-size: 12px;
