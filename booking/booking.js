@@ -27,7 +27,7 @@ function closeNav() {
 let carsDetails = [
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/57b1b1b9180a56fba0156135ea6dc8e9f058303d.jpg?1621260558",
+      "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800",
 
     carname: "Maruti Wagon R",
     transmission: "Automatic",
@@ -41,7 +41,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/d838660c8fd50d0f2e3ed28c2b0550cbe940c0e0.JPG?1628247230",
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mike-bird-170811.jpg&fm=jpg&_gl=1*x4q7yq*_ga*NTE3MTIwMjg0LjE2ODYyNDQwNzc.*_ga_8JE65Q40S6*MTcwMzY4OTg2Mi4xLjAuMTcwMzY4OTg2Mi4wLjAuMA..",
 
     carname: "Hyundai Santro",
     transmission: "Manual",
@@ -55,7 +55,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/c2fd725617ab00fc5db13c86298835c1825bc233.JPG?1627621607",
+      "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800",
 
     carname: "Nissan Micra",
     transmission: "Manual",
@@ -70,7 +70,7 @@ let carsDetails = [
 
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/14bbe6f0419d819891f9c4b76b798130fa2d7732.JPG?1627102878",
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mike-bird-170811.jpg&fm=jpg&_gl=1*x4q7yq*_ga*NTE3MTIwMjg0LjE2ODYyNDQwNzc.*_ga_8JE65Q40S6*MTcwMzY4OTg2Mi4xLjAuMTcwMzY4OTg2Mi4wLjAuMA..",
 
     carname: "Maruti S-Cross",
     transmission: "Automatic",
@@ -84,7 +84,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/4f978e418417cef5f069be1c013ee75b34c294ce.png?1613648724",
+      "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800",
 
     carname: "Maruti Swift",
     transmission: "Manual",
@@ -98,7 +98,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/d214904b8ea2db5eee94b476923ecb49e47c37a5.JPG?1624540855",
+      "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=800",
 
     carname: "Hyundai I20",
     transmission: "Manual",
@@ -113,7 +113,7 @@ let carsDetails = [
 
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/464870b8c0460671f0f7c6da52a5577fd2fb089e.JPG?1630567517",
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mike-bird-170811.jpg&fm=jpg&_gl=1*x4q7yq*_ga*NTE3MTIwMjg0LjE2ODYyNDQwNzc.*_ga_8JE65Q40S6*MTcwMzY4OTg2Mi4xLjAuMTcwMzY4OTg2Mi4wLjAuMA..",
 
     carname: "Toyota Etios",
     transmission: "Manual",
@@ -128,8 +128,7 @@ let carsDetails = [
 
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/c5d25b436da0aeb9ca1c25c86d8e85a1e9115aaf.JPG?1623135458",
-
+      "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Renault Triber",
     transmission: "Manual",
     fueltype: "Diesel",
@@ -143,7 +142,7 @@ let carsDetails = [
 
   {
     carimage:
-      "https://zoomcar-assets.zoomcar.com/photographs/original/1a46bbfce3d72635ae64a06e6bbb8f8745d41108.png?1584524485",
+      "https://images.pexels.com/photos/253096/pexels-photo-253096.jpeg?auto=compress&cs=tinysrgb&w=800",
 
     carname: "Tata Nexon",
     transmission: "Automatic",
@@ -157,7 +156,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/caa0d4f0258c7da7e005a54df6eb930001af567b.JPG?1631171816",
+      "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=800",
 
     carname: "Maruti",
     transmission: "Automatic",
@@ -171,7 +170,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/d4f137a56d1bcbf2a8f976b5029685d095425930.JPG?1623737903",
+      "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Datsun Go Plus",
     transmission: "Manual",
     fueltype: "petrol",
@@ -184,7 +183,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/19eca74a7982804ba713dd9485861a7543422115.JPG?1638531037",
+      "https://images.pexels.com/photos/261986/pexels-photo-261986.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Tata Tiago",
     transmission: "Manual",
     fueltype: "petrol",
@@ -197,7 +196,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/574035634d512b92d02dbd20c6d456f3370fa7d9.JPG?1632117366",
+      "https://images.pexels.com/photos/261986/pexels-photo-261986.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Renault Kiger",
     transmission: "Manual",
     fueltype: "petrol",
@@ -210,7 +209,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/d4ed67c506efdcac3cf25cabff555c095a463990.jpg?1617089835",
+      "https://images.pexels.com/photos/253096/pexels-photo-253096.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Maruti Suzuki XL6 Petrol",
     transmission: "Manual",
     fueltype: "petrol",
@@ -223,7 +222,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://zoomcar-assets.zoomcar.com/photographs/original/0f9289bfae8401465ba95cca701e3732cc7b4022.JPG?1626670687",
+      "https://images.pexels.com/photos/253096/pexels-photo-253096.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Maruti Ciaz",
     transmission: "Manual",
     fueltype: "petrol",
@@ -236,7 +235,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/c1c7c50920ee5554049b8e2811630a667f5eef2d.jpg?1619086336",
+      "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Honda Amaze 1.2V",
     transmission: "Manual",
     fueltype: "petrol",
@@ -249,7 +248,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/9ee2b2607b222eb1162a85c59cb7224527a0dd21.png?1584525031",
+      "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Hyundai Verna",
     transmission: "Manual",
     fueltype: "petrol",
@@ -262,7 +261,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/02760dae1afa7a02535764d5d260705ceeb34033.JPG?1631965146",
+      "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Hyundai Xcent",
     transmission: "Manual",
     fueltype: "petrol",
@@ -275,7 +274,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/9eb63e28e7b5322a21d0f57a9557869700b60e71.png?1584524284",
+      "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Mahindra XUV 500 AT",
     transmission: "Automatic",
     fueltype: "diesel",
@@ -288,7 +287,7 @@ let carsDetails = [
   },
   {
     carimage:
-      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/bf11b6a57ae2f1ef5b3f309c2d996fb324c6eb3f.JPG?1624082585",
+      "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800",
     carname: "Maruti Suzuki XL6 Petrol",
     transmission: "Manual",
     fueltype: "petrol",
