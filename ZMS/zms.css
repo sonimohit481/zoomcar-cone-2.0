@@ -1,0 +1,483 @@
+body {
+  margin: 0;
+}
+header {
+  background-color: #000;
+  color: #7fd858;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  justify-content: space-around;
+}
+header img {
+  width: 200px;
+  margin-top: 20px;
+}
+header div:last-child {
+  padding: 10px;
+  background-color: rgb(227, 235, 225);
+  border-radius: 10px;
+}
+#hero {
+  background: url(https://raw.githubusercontent.com/sonimohit481/zoomcar-cone-2.0/main/Images/background2.jpeg);
+  background-size: cover;
+  background-position: 50% 75%;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  padding: 33px;
+  margin: 0px;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero button {
+  padding: 10px;
+  background-color: rgb(227, 235, 225);
+  border-radius: 10px;
+}
+#green {
+  height: 16px;
+  background-color: #10a310;
+}
+/* ----------- product --------------- */
+#product {
+  padding: 20px;
+  background-color: #edfeed;
+}
+
+#product div:first-child {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #1f1f1f;
+  padding-top: 20;
+}
+
+#product div:last-child {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+}
+
+#product div:last-child > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  bottom: -32px;
+}
+
+#product > div > div > div:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#product > div > div > div:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #fff;
+  border-radius: 8px;
+  background-color: #10a310;
+
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#product > div > div:last-child {
+  padding: 72px 32px 32px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 80%;
+  max-width: 940px;
+  align-self: center;
+}
+
+#product > div > div > div > div:nth-child(1) {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #666;
+  max-width: 620px;
+}
+
+#product > div > div > div > div:nth-child(2) {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding: 20px;
+}
+
+#product > div > div > div > div:nth-child(2) > div {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#product > div > div > div > div:nth-child(2) > div .slideshow {
+  width: 100%;
+  margin: auto;
+}
+
+#product > div > div > div > div:nth-child(2) > div > .slideshow img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+#product > div > div > div > div:nth-child(2) > div > .slideshow .mslide {
+  display: none;
+}
+
+#product > div > div > div > div:nth-child(3) {
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 1.68px;
+  color: #666;
+  padding-bottom: 24px;
+}
+
+#product > div > div > div > div:nth-child(4) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: (2, 100px);
+}
+
+#product > div > div > div > div:nth-child(4) > div > div:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  text-align: start;
+  padding-bottom: 8px;
+}
+
+#product > div > div > div > div:nth-child(4) > div > div:last-child {
+  text-align: start;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #666;
+}
+
+#product > div > div > div > div:nth-child(5) {
+  padding-top: 40px;
+  width: 10%;
+}
+
+#product > div > div > div > div:nth-child(5) > button {
+  padding: 12px 34px;
+  border: none;
+  background-color: #10a310;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  min-width: 220px;
+  cursor: pointer;
+}
+/* for therd section */
+#therd {
+  position: relative;
+}
+
+#bg-green {
+  background: url(https://www.zoomcar.com/assets/component-images/bound@2x.476261040c66e2e84987563e0b955b44.jpg);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+}
+
+#therd #bg-green div {
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 8px;
+}
+
+#therd #mainbox {
+  position: relative;
+  top: -20vh;
+  padding: 48px 72px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+#therd #mainbox #box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+#therd #mainbox #box div {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+}
+
+#therd #mainbox #box #pt {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  font-weight: 600;
+  color: #1f1f1f;
+  padding-bottom: 8px;
+}
+
+#therd #mainbox #box #st {
+  font-weight: 400;
+  color: #666;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+}
+
+#therd #white {
+  height: 10vh;
+}
+
+#therd #bg-blue {
+  background: url(https://www.zoomcar.com/assets/component-images/rectangle.e2190cd211f285fb86e5c7809c0f7b42.jpg)
+    repeat;
+}
+
+#therd #bg-blue div:first-child {
+  position: relative;
+  top: -10vh;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#therd #bg-blue div:first-child img {
+  max-width: 940px;
+}
+
+#therd #bg-blue div:last-child {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0px;
+}
+
+#therd #bg-blue div:last-child #pt {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #1f1f1f;
+  max-width: 420px;
+}
+
+#therd #bg-blue div:last-child #st {
+  font-size: 16px;
+  font-weight: 400;
+
+  text-align: center;
+  color: #666;
+  max-width: 460px;
+  padding-top: 16px;
+}
+
+#therd #cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60%;
+  margin: auto;
+  gap: 5px;
+}
+
+#therd #cards > div {
+  margin: 0 20px 40px 20px;
+  padding: 24px;
+  border-radius: 4px;
+  background-image: linear-gradient(318deg, #0b0b0b, #1b1b1b 3%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#therd #cards > div > #pt {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #fff;
+}
+/* forthhhhh div */
+#forth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#forth #pt {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #1f1f1f;
+  max-width: 420px;
+}
+
+#forth #st {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #666;
+  max-width: 460px;
+  padding-top: 16px;
+}
+
+#forth #ft {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  width: 40%;
+}
+
+#ft .ipt-box {
+  display: flex;
+  justify-content: space-between;
+}
+#forth #ft .ipt-box .ht {
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 5px;
+  outline: none;
+}
+
+#forth #ft .vt {
+  height: 40px;
+  width: 94%;
+  padding: 10px;
+  margin: 10px 5px;
+  outline: none;
+}
+
+#forth #ft .mbox {
+  height: 80px;
+  padding: 10px;
+  width: 94%;
+  margin: 10px 5px;
+  outline: none;
+}
+
+#forth #ft #btn {
+  display: flex;
+  font-size: 14px;
+  padding: 10px 80px;
+  background-color: #10a310;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+
+/* -----------------footer--------- */
+#footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  background-image: linear-gradient(270deg, #6e944c, #52c600);
+}
+
+#footer .info-1 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+#footer .info-2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+  padding-top: 8px;
+}
+
+#footer .info-3 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #a8a8a8;
+  padding: 20px 0px;
+  color: #000;
+}
+
+#footer img {
+  align-self: center;
+  height: 24px;
+}
+
+@media all and (max-width: 800px) {
+  header div:last-child {
+    display: none;
+  }
+  #therd #cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-left: -18px;
+    padding: 10px;
+  }
+  #hero {
+    font-size: medium;
+  }
+  #product div:first-child {
+    font-size: 24px;
+    padding-top: 3%;
+  }
+
+  #product div:last-child > div:first-child {
+    padding: 2px;
+  }
+
+  #product > div > div > div:first-child {
+    font-size: 14px;
+  }
+
+  #product > div > div:last-child {
+    padding: 32px 16px;
+    width: 100%;
+  }
+  #forth #ft {
+    width: 80%;
+  }
+
+  #forth #ft .vt {
+    width: 92%;
+  }
+
+  #forth #ft .mbox {
+    width: 92%;
+  }
+}
